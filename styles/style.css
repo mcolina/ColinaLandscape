@@ -1,0 +1,820 @@
+html {
+  font-size: 10px;
+background-color: #FFFFFF;
+    
+}
+
+/*---------navbar/dropdown-------*/
+
+/* navigation bar*/
+.navbar {
+  overflow: hidden;
+  background-color: #D5F0DE;
+  font-size: 28px;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index:3;
+  font-family: Georgia, Times, "Times New Roman", serif;
+   /* font-family:"Comic Sans MS", cursive, sans-serif;*/
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover
+.navbar a:hover {
+  background-color: #AED0BA;
+  color: white;
+}*/
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #2FC564;
+  color: white;
+}
+
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  display: inline-block;
+  
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 28px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  
+  background-color: #AED0BA;
+  color: white;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3 ;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*---------end-navbar/dropdown-------*/
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Header/logo Title */
+.header {
+  padding: 0px;
+  text-align: center;
+  /*background: #D5F0DE ;*/
+  background: white ;
+  color: white;
+}
+
+body {
+   
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.imgText {
+  display: block;
+  margin: 0 auto;
+}
+
+logo {
+  width: 25%;
+  position: absolute;
+  position: absolute;
+  bottom: 70px;
+  left: 16px;
+}
+
+.parallax-container{
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    
+    
+}
+
+.parallax {
+  /* The image used */
+ 
+ /* Set a specific height */
+  min-height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-container {
+  
+    height: 20%;
+}
+
+
+.video-parallax {
+    -webkit-transition-position: fixed;
+   
+    /* Set a specific height */
+     min-height: 400px;
+     height: 50%;
+
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+video {
+    margin:0 auto;
+    z-index: -1;
+    transition: 1s opacity;
+}
+
+
+
+.container {
+  position: relative;
+}
+
+.green-container {
+    background-color: #D5F0DE;
+  position: relative;
+ padding: 40px;
+ width: 95%;
+}
+
+.white-container {
+background-color: white;
+
+position: relative;
+ padding: 60px;
+ width: 95%;
+}
+
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: green;
+  text-shadow: 0px 0px 0px black;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: darkgray;
+
+}
+
+h3 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 40px 0;
+  color: gray;
+  text-shadow: 0px 0px 0px black;
+
+}
+
+h4 {
+ margin-top: 50px;
+  font-size: 30px;
+  text-align: center;
+  border-top: 2px solid darkgray;
+  padding: 20px;
+  color: gray;
+  text-shadow: 0px 0px 0px black;
+
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+  color: black;
+   
+}
+
+.service-container {
+  position: relative;
+  text-align: center;
+  padding: 0px;
+  min-width: 800px;
+ 
+}
+
+serviceTitle {
+  font-size: 60px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  margin-left: 30px;
+  margin-top: 40px;
+  color: gray;
+  text-shadow: 0px 0px 0px black;
+  border-left: 8px solid #AED0BA;;
+  font-family:"Arial Black", Gadget, sans-serif;
+
+}
+
+serviceTitle2 {
+  font-size: 60px;
+  text-align: center;
+  padding: 40px;
+  color: white;
+  text-shadow: 0px 0px 0px black;
+  font-family:"Arial Black", Gadget, sans-serif;
+
+}
+
+/* service title text */
+.service-text {
+  position: absolute;
+  bottom: 60px;
+  left: 16px;
+
+}
+service-p{
+  font-size: 20px;
+  text-align: justify;
+  margin: 0;
+  line-height: 1.5;
+  padding: 20px 0;
+  color: darkgray;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+
+.bar{
+  padding: 10px;
+  width: 100%;
+  background-color: green;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+
+
+/* Column container */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #D5F0DE;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+.box1 {
+    
+  font-size: 30px;
+  text-align: center;
+  width: 400px;
+  text-align: center;
+  margin: 0;
+
+  float: left;
+  width: 50%;
+  padding: 10px;
+  display: block;
+  background-color: #FFFFFF;
+  border: 5px solid gray;
+  padding: 20px 20px 20px 20px;
+
+  overflow: auto;
+  
+}
+
+.box2 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.box5{
+    position: relative;
+     float: left;
+}
+
+.contact-box{
+    position: relative;
+     float: left;
+     min-width: 800px;
+}
+
+.text-block {
+  width: 25%;
+  position: absolute;
+  
+  bottom: 80px;
+  right: 700px;
+  left: 40px;
+  width: 300px;
+  background-color: white;
+  color: gray;
+  padding: 30px 30px 30px 30px;
+  float: left;
+  display: block;
+  border: 5px solid gray;
+  overflow: auto;
+   z-index: 1;
+   text-align: center;
+    margin: 0;
+  
+}
+
+.box3 {
+  font-size: 30px;
+  text-align: center;
+  width: 400px;
+  margin: 0;
+
+  float: left;
+  width: 50%;
+  padding: 10px;
+  display: block;
+  background-color: #FFFFFF;
+  border: 5px solid gray;
+  padding: 20px 20px 20px 20px;
+  position: relative;
+  overflow: auto;
+  
+}
+
+.boxLeft {
+  font-size: 30px;
+  text-align: center;
+
+  float: left;
+  width: 45%;
+  display: block;
+  background-color: #FFFFFF;
+  
+  overflow: auto;
+  
+}
+
+.boxRight {
+  font-size: 30px;
+  text-align: center;
+  
+  margin-right: 50px;
+  float: right;
+  width: 45%;
+  display: block;
+  background-color: #FFFFFF;
+  overflow: auto;
+  
+}
+
+
+.contactUsBox {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  display: block;
+  width: 100%;
+  float: left;
+
+  background-color: #FFFFFF;
+  border: 5px solid gray;
+  padding: 35px 0px 35px 0px;
+ 
+  overflow: auto;
+  
+}
+
+.box6 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  display: block;
+}
+
+.footer1 {
+  float: left;
+  width: 20%;
+  padding: 50px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+ 
+}
+
+/* dropdown ROW*/
+.rowD {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+/* Clear floats after the columns */
+.rowD:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* dropdown column*/
+.columnD {
+  float: left;
+  width: 100%;
+  padding: 12px;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 17%;
+  padding: 12px;
+
+}
+
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  display: none;
+  position: relative;
+  text-align: center;
+  padding: 40px;
+}
+
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  padding: 40px;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 40px;
+  font-family:"Arial Black", Gadget, sans-serif;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  padding: 40px;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 100px;
+  left: 60px;
+
+}
+
+
+/* Buttons*/
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+.button1 {
+  background-color: #D5F0DE;
+  color: black;
+  
+}
+
+.button1:hover {
+  background-color: #2FC564;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+/*services image boxes*/
+
+.containerS {
+  position: relative;
+  padding: 10px;
+  width: 22%;
+
+}
+
+.imageS {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 6px;
+}
+
+.image-default {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  
+  
+
+}
+.spacebox{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Column for the service section */
+.column3 {
+  width: 30%;
+  padding: 12px;
+}
+
+/* Column for the design section */
+.column4 {
+    float: left;
+  width: 40%;
+  padding: 20px;
+  
+   
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.containerS:hover .imageS {
+  opacity: 0.3;
+}
+
+.containerS:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding: 16px 32px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+   border-radius: 6px;
+}
+
+
+
+
+
+/* ------About section and Team page--------*/
+
+
+.columnT {
+  width: 30%;
+  padding: 20px;
+}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.containerT {
+  position: relative;
+  width: 100%;
+}
+
+.containerLogo {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.containerA {
+      margin-top: 30px;
+    margin-left: 65px;
+    width: 90%;
+  
+ 
+}
+
+
+/* Make the image to responsive */
+.imageT {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+      transition-duration: 0.8s;
+     /* border: 5px solid darkgray;*/
+}
+
+.imageT:hover {
+    -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+     /* width:105%;
+      border: 0px solid white;*/
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .6s ease;
+  opacity:0;
+  color: white;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+pT {
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1px;
+  color: darkgray;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+plain-text {
+  font-size: 22px;
+  line-height: 2;
+  letter-spacing: 1px;
+  color: darkgray;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.containerT:hover .overlay {
+  opacity: 1;
+  width: 100%;
+  
+}
+
