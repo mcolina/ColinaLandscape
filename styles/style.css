@@ -167,9 +167,8 @@ logo {
 }
 
 .parallax {
-  /* The image used */
  
- /* Set a specific height */
+ /* default height */
   min-height: 600px;
 
   /* Create the parallax scrolling effect */
@@ -212,18 +211,17 @@ video {
 }
 
 .green-container {
-    background-color: #D5F0DE;
-  position: relative;
+background-color: #D5F0DE;
+ position: relative;
  padding: 40px;
- width: 95%;
+ 
 }
 
 .white-container {
 background-color: white;
-
 position: relative;
  padding: 60px;
- width: 95%;
+
 }
 
 
@@ -348,10 +346,6 @@ service-p{
 }
 
 
-
-
-
-
 /* Column container */
 .row {
   display: -ms-flexbox; /* IE10 */
@@ -405,38 +399,6 @@ service-p{
   padding: 10px;
 }
 
-.box5{
-    position: relative;
-     float: left;
-}
-
-.contact-box{
-    position: relative;
-     float: left;
-     min-width: 800px;
-}
-
-.text-block {
-  width: 25%;
-  position: absolute;
-  
-  bottom: 80px;
-  right: 700px;
-  left: 40px;
-  width: 300px;
-  background-color: white;
-  color: gray;
-  padding: 30px 30px 30px 30px;
-  float: left;
-  display: block;
-  border: 5px solid gray;
-  overflow: auto;
-   z-index: 1;
-   text-align: center;
-    margin: 0;
-  
-}
-
 .box3 {
   font-size: 30px;
   text-align: center;
@@ -453,6 +415,19 @@ service-p{
   position: relative;
   overflow: auto;
   
+}
+
+
+.box5{
+    position: relative;
+     float: left;
+}
+
+.box6 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  display: block;
 }
 
 .boxLeft {
@@ -498,12 +473,34 @@ service-p{
   
 }
 
-.box6 {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  display: block;
+
+.contact-box{
+    position: relative;
+     float: left;
+     min-width: 800px;
 }
+
+.text-block {
+  width: 25%;
+  position: absolute;
+  
+  bottom: 80px;
+  right: 700px;
+  left: 40px;
+  width: 300px;
+  background-color: white;
+  color: gray;
+  padding: 30px 30px 30px 30px;
+  float: left;
+  display: block;
+  border: 5px solid gray;
+  overflow: auto;
+   z-index: 1;
+   text-align: center;
+    margin: 0;
+  
+}
+
 
 .footer1 {
   float: left;
@@ -602,7 +599,7 @@ service-p{
 }
 
 
-/* Buttons*/
+/*-------Buttons-------*/
 
 .button {
   border: none;
@@ -642,7 +639,7 @@ service-p{
   color: white;
 }
 
-/*services image boxes*/
+/*-----Services Image Boxes--------*/
 
 .containerS {
   position: relative;
@@ -695,7 +692,6 @@ service-p{
   width: 40%;
   padding: 20px;
   
-   
 }
 
 .middle {
