@@ -50,38 +50,34 @@ var containerC =  document.getElementById("containerContact");
 
 function submit_click(){
 
-    
     var l1 = fname.value.length;
     var l2 = lname.value.length;
     var l3 = email.value.length;
     var l4 = mes.value.length;
-
 
     if (l1 != 0 && l2 != 0 && l3 != 0 && l4 != 0 ){
         
              var alert_text ='Thank you '  + fname.value + '! Your message has been sent successfully! We will get back to you as soon as we can. Thank you.';
         alert(alert_text);
         
-        
     }else {
         
         containerC.stlye.background = "red";
-        
     }
+}
 
 
-    
-    
-   
-        
+var myIndex = 0;
+imageSlides();
 
-        
-  /*  } else{
-        
-        containerC.stlye.background-color = "red";
-        
-        var alert_text ='NO';
-         alert(alert_text);
-    }*/
-    
+function imageSlides() {
+  var i;
+  var x = document.getElementsByClassName("slideshow");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(imageSlides, 3000);
 }
