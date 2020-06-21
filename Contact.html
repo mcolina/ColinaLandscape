@@ -1,0 +1,191 @@
+<?php
+if(isset($_POST['submit'])){
+    $to = "mylescolina@icloud.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['firstname'];
+    $last_name = $_POST['lastname'];
+    $subject =  $_POST['subject'];
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+    <title>COLINA LANDSCAPE</title>
+    <!-- CSS files-->
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+  
+  <body>
+<!-- Header Section-->
+      <div class="header">
+           <img src="logos/ColinaLandscapeLogo.png" alt="ColinaLandscapeLogo" width="700" height="300">
+          </div>
+      
+<!-- Navigation Menu Bar-->
+   <div class="navbar">
+        <a href="Homepage.html" class="logo"><img src="logos/ColinaLandscapeLogo.png" alt="LOGO"  height="31">
+        </a>
+        <div class="header-right">
+          <a class="active" href="Homepage.html">Home</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+                  Services
+              <i class="fa fa-caret-down"></i>
+            </button>
+                 <div class="dropdown-content">
+                       <a href="Services.html">All Services</a>
+                       <a href="Landscaping.html">Landscaping</a>
+                       <a href="Design.html">Design</a>
+                       <a href="OutdoorLighting.html">Outdoor Lighting</a>
+                       <a href="Fencing.html">Fencing</a>
+                       <a href="Sheds-GreenHouses.html">Sheds/GreenHouses</a>
+                       <a href="Patio.html">Patio</a>
+                       <a href="Maintenance.html">Maintenance</a>
+                       <a href="Drainage.html">Drainage</a>
+                     </div>
+                </div>
+                 
+                   <a href="Contact.html">Contact</a>
+                   <a href="About.html">About</a>
+            
+                 </div>
+              </div>
+
+  
+  <div class="white-container" style="padding-left:10px;">
+ <serviceTitle>CONTACT US!</serviceTitle>
+ </div>
+  
+  
+  <!-- contactBox-->
+  <div class="containerContact">
+      
+    <form action="" method="post">
+      <label for="fname">First Name</label>
+      <input type="text" required="required" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Last Name</label>
+      <input type="text" required="required" id="lname" name="lastname" placeholder="Your last name..">
+
+       <label for="email">Email Address</label>
+       <input type="text" required="required" id="email" name="email" placeholder="youremail@address.com..">
+              
+      <label for="">Subject</label>
+      <select id="subject" required="required" name="subject">
+        <option value="general">General Inquiry</option>
+        <option value="landscaping">Landscaping</option>
+        <option value="hardscaping">Hardscaping</option>
+        <option value="fencing">Fencing</option>
+        <option value="sheds">Sheds/Greenhouses</option>
+        <option value="drainage">Drainage</option>
+        <option value="lighting">Outdoor Lighting</option>
+        <option value="maintenance">Yard Maintenance</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" required="required" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+      <input name="submit" type="submit" value="SUBMIT">
+    </form>
+  </div>
+  
+  
+  
+  
+  
+  
+                        
+<!-- Image Selction of Services-->
+              <div class="row">
+                   <div class="containerS">
+                       <img src="images/Service1.jpeg" alt="Service1" class="imageS" style="width:100%">
+                       <div class="middle">
+                       <div  onclick="location.href='Landscaping.html';" class="text">Home Landscaping</div>
+                       </div>
+                   </div>
+                       
+                   <div class="containerS">
+                        <img src="images/Design2.png" alt="Design" class="imageS" style="width:100%">
+                        <div class="middle">
+                        <div class="text" onclick="location.href='Design.html';">Design</div>
+                        </div>
+                    </div>
+                      
+                    <div class="containerS">
+                        <img src="images/Service2.jpeg" alt="Service2" class="imageS" style="width:100%">
+                        <div class="middle">
+                        <div class="text" onclick="location.href='OutdoorLighting.html';" >Outdoor Lighting</div>
+                        </div>
+                    </div>
+                    
+                    <div class="containerS">
+                        <img src="images/Service3.png" alt="Service3" class="imageS" style="width:100%">
+                        <div class="middle">
+                        <div class="text" onclick="location.href='Patio.html';">Patio</div>
+                        </div>
+                   </div>
+                            
+                   <div class="containerS">
+                       <img src="images/Service5.jpeg" alt="Service5" class="imageS" style="width:100%">
+                       <div class="middle">
+                       <div class="text" onclick="location.href='Fencing.html';">Fencing</div>
+                       </div>
+                    </div>
+                   
+                    <div class="containerS">
+                        <img src="images/Service4.jpeg" alt="Service4" class="imageS" style="width:100%">
+                        <div class="middle">
+                        <div class="text" onclick="location.href='Maintenance.html';">Lawn Maintenance</div>
+                        </div>
+                    </div>
+                              
+                    <div class="containerS">
+                       <img src="images/Service6.png" alt="Service6" class="imageS" style="width:100%">
+                       <div class="middle">
+                       <div class="text" onclick="location.href='Sheds-GreenHouses.html';">Sheds GreenHouses</div>
+                       </div>
+                   </div>
+                    
+                   <div class="containerS">
+                       <img src="images/Service7.jpeg" alt="Service7" class="imageS" style="width:100%">
+                       <div class="middle">
+                       <div class="text" onclick="location.href='Drainage.html';">Drainage</div>
+                       </div>
+                    </div>
+                            
+             </div>
+                            
+<!-- Footer Section-->
+      <div class="footer1">
+          <p>CALL US   (804) 972-7851</p>
+          </div>
+      
+      <div class="footer1">
+          <p>info@ColinaLandscape.com</p>
+          </div>
+      
+      <div class="footer1">
+          <p>15519 Fruitful Hill Dr.
+          Someplace Virginia, 44523</p>
+          </div>
+<!-- JavaScript File-->
+    <script src="scripts/main.js"></script>
+    </body>
+</html>
