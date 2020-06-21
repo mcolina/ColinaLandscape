@@ -1,26 +1,3 @@
-<?php
-if(isset($_POST['submit'])){
-    $to = "mylescolina@icloud.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['firstname'];
-    $last_name = $_POST['lastname'];
-    $subject =  $_POST['subject'];
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
-
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -56,7 +33,7 @@ if(isset($_POST['submit'])){
                        <a href="OutdoorLighting.html">Outdoor Lighting</a>
                        <a href="Fencing.html">Fencing</a>
                        <a href="Sheds-GreenHouses.html">Sheds/GreenHouses</a>
-                       <a href="Patio.html">Patio</a>
+                       <a href="Patio.html">Hardscaping</a>
                        <a href="Maintenance.html">Maintenance</a>
                        <a href="Drainage.html">Drainage</a>
                      </div>
@@ -102,16 +79,12 @@ if(isset($_POST['submit'])){
       <label for="message">Message</label>
       <textarea id="message" required="required" name="message" placeholder="Write something.." style="height:200px"></textarea>
 
-      <input name="submit" type="submit" value="SUBMIT">
+      <input name="submit" type="submit" value="SUBMIT" onclick="submit_click()">
     </form>
   </div>
   
   
   
-  
-  
-  
-                        
 <!-- Image Selction of Services-->
               <div class="row">
                    <div class="containerS">
@@ -138,7 +111,7 @@ if(isset($_POST['submit'])){
                     <div class="containerS">
                         <img src="images/Service3.png" alt="Service3" class="imageS" style="width:100%">
                         <div class="middle">
-                        <div class="text" onclick="location.href='Patio.html';">Patio</div>
+                        <div class="text" onclick="location.href='Patio.html';">Hardscaping</div>
                         </div>
                    </div>
                             

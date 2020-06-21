@@ -41,4 +41,7 @@ function myFunction(imgs) {
 }
 
 
-
+function submit_click(){
+    
+    alert('Your Message has been sent successfully! We will get back to you as soon as we can. Thank you.');
+}
