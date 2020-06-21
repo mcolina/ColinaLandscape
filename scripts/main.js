@@ -41,7 +41,47 @@ function myFunction(imgs) {
 }
 
 
+var fname =  document.getElementById("fname");
+var lname =  document.getElementById("lname");
+var email =  document.getElementById("email");
+var sub =  document.getElementById("subject");
+var mes =  document.getElementById("message");
+var containerC =  document.getElementById("containerContact");
+
 function submit_click(){
+
     
-    alert('Your Message has been sent successfully! We will get back to you as soon as we can. Thank you.');
+    var l1 = fname.value.length;
+    var l2 = lname.value.length;
+    var l3 = email.value.length;
+    var l4 = mes.value.length;
+
+
+    if (l1 != 0 && l2 != 0 && l3 != 0 && l4 != 0 ){
+        
+             var alert_text ='Thank you '  + fname.value + '! Your message has been sent successfully! We will get back to you as soon as we can. Thank you.';
+        alert(alert_text);
+        
+        
+    }else {
+        
+        containerC.stlye.background = "red";
+        
+    }
+
+
+    
+    
+   
+        
+
+        
+  /*  } else{
+        
+        containerC.stlye.background-color = "red";
+        
+        var alert_text ='NO';
+         alert(alert_text);
+    }*/
+    
 }
