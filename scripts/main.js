@@ -1,8 +1,8 @@
-let myImage = document.querySelector('img');
+let myLogo = document.querySelector('img');
 
-myImage.onclick = function() {
-    let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/ColinaLandscapeLogo.png') {
+myLogo.onclick = function() {
+    let mySrc = myLogo.getAttribute('src');
+    if(mySrc === 'logos/ColinaLandscapeLogo.png') {
 	window.location.href = this.id + 'Homepage.html';
 	
     }
@@ -10,11 +10,12 @@ myImage.onclick = function() {
 
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
-
+let logoImage = document.getElementById('main-logo');
 
 myButton.onclick = function() {
     window.location.href = this.id + 'Homepage.html';
 }
+
 
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
