@@ -71,7 +71,6 @@ background-color: #FFFFFF;
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  
   background-color: #AED0BA;
   color: white;
 }
@@ -123,6 +122,8 @@ background-color: #FFFFFF;
     width: 100%;
   }
 }
+
+
 
 /* Header/logo Title */
 .header {
